@@ -1,3 +1,4 @@
+import { FaceBook, Twitter } from '@/widgets';
 import React from 'react'
 
 const Footer = () => {
@@ -7,8 +8,12 @@ const Footer = () => {
         DASHBOARD
       </h1>
       <div className="flex flex-row items-center space-x-4 uppercase text-gray-400">
-        <li className='list-none'>facebok</li>
-        <li className='list-none'>twitter</li>
+        <li className='list-none text-white'>
+          <FaceBook />
+        </li>
+        <li className='list-none text-white'>
+          <Twitter />
+        </li>
       </div>
     </div>
   );
