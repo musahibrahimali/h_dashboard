@@ -1,7 +1,6 @@
 "use client";
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
-import SideBar from "@/components/SideBar/SideBar";
 import React, { useState } from "react";
 
 export default function DashboardLayout({
@@ -9,12 +8,8 @@ export default function DashboardLayout({
 }: {
     children: React.ReactNode;
 }) {
-    const [toggleSidebar, setToggleSidebar] = useState(false);
     const [lightTheme, setLightTheme] = useState(true);
 
-    const handleToggleSidebar = () => {
-        setToggleSidebar(!toggleSidebar);
-    };
     
     const toggleTheme = () => {
         setLightTheme(!lightTheme);
@@ -22,18 +17,15 @@ export default function DashboardLayout({
 
     return (
         <React.Fragment>
-            <div className="flex min-h-screen">
-                <SideBar toggleSidebar={toggleSidebar} />
+            <div className="flex min-h-full min-w-full">
                 <div className="flex flex-col flex-grow">
                     <Navbar 
-                        handleToggleSidebar={handleToggleSidebar} 
-                        toggleSidebar={toggleSidebar}
                         lightTheme={lightTheme}
                         toggleTheme={toggleTheme}
                     />
                 
-                    <main className={`relative bg-body-bg flex-grow ${toggleSidebar ? 'ml-0': 'ml-64'} overflow-y-auto transition-all duration-500 ease-in-out`}>
-                        <div className="min-h-screen pt-20 static left-0 right-0">
+                    <main className="bg-body-bg flex-grow overflow-y-auto transition-all duration-500 h-full w-full ease-in-out">
+                        <div className="pt-10 min-h-screen min-w-full">
                             {children}
                         </div>
                         <Footer />

@@ -8,8 +8,8 @@ const containerStyle = {
 };
 
 const center = {
-    lat: -3.745,
-    lng: -38.523
+    lat: 6.673175,
+    lng: -1.565423
 };
 
 const MapComponent = (props:any) => {
@@ -41,7 +41,7 @@ const MapComponent = (props:any) => {
         <GoogleMap
             mapContainerStyle={containerStyle}
             center={center}
-            zoom={zoom ?? 10}
+            zoom={zoom ?? 13.0}
             onLoad={onLoad}
             onUnmount={onUnmount}
         >

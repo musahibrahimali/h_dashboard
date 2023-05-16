@@ -4,42 +4,16 @@ import React from 'react';
 
 const Navbar = (props:any)  => {
     const {
-        toggleSidebar,
-        handleToggleSidebar,
         lightTheme,
         toggleTheme,
     } = props;
 
     return (
         <React.Fragment>
-            <header className={`fixed top-0 flex flex-row flex-nowrap items-center justify-between mt-0 py-2 ${toggleSidebar ? 'left-0': 'left-64'} right-0 h-10 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg z-50 px-4 transition-all duration-500 ease-in-out`}>
+            <header className="flex flex-row flex-nowrap items-center justify-between mt-0 py-2 right-0 h-10 bg-white z-50 px-4 transition-all duration-500 ease-in-out">
                     <div className="flex items-center justify-start">
-                        <button
-                            type="button"
-                            onClick={handleToggleSidebar}
-                            className="inline-flex items-center justify-center text-gray-800 hover:text-gray-600 dark:text-gray-300 dark:hover:text-gray-200 focus:outline-none focus:ring-0"
-                        >
-                        <span className="sr-only">Mobile menu</span>
-                            <svg className={`${toggleSidebar ? 'block': 'hidden'} h-8 w-8`} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                                <path className="hidden md:block" fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                                <path className="md:hidden" d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
-                            </svg>
-
-                            <svg 
-                                className={`${toggleSidebar ? 'hidden': 'block'} block h-8 w-8`} 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                fill="currentColor" 
-                                viewBox="0 0 16 16">
-                                <path 
-                                    className="md:hidden" 
-                                    fill-rule="evenodd" 
-                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-                                />
-                                <path 
-                                    className="hidden md:block" 
-                                    d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
-                                />
-                            </svg>
+                        <button className="uppercase font-bold tracking-wider md:text-xl lg:text-2xl text-gray-700">
+                            Dashboard
                         </button>
 
                         <form className="hidden sm:inline-block md:hidden lg:inline-block mx-5">

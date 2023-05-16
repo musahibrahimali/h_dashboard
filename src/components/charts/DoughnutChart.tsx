@@ -20,7 +20,7 @@ export const options = {
 };
 
 export const data = {
-    labels: ['Red', 'Blue', 'Yellow'],
+    // labels: ['Blue', 'Blue', 'Yellow'],
     datasets: [ 
         {
             label: '# of Votes',
